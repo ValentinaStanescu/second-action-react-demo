@@ -1,4 +1,4 @@
-name: Oitput informatin
+name: Output informatin
 on: [workflow_dispatch]
 jobs:
     info:
@@ -7,4 +7,4 @@ jobs:
             - name: Output GitHub context
               run: | 
                 echo "${{ toJson(github) }}"   #this is an expresion 
-                echo "ENV = ${{env}}"
+                echo "ENV = ${{toJson(env)}}"
